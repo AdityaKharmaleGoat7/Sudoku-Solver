@@ -36,8 +36,8 @@ bool isSafe(int row, int col, int grid[9][9], int val){
                         if(isSafe(row, col, grid, val)){
                             grid[row][col] = val;
                             
-                            bool aageSolutionPossible = SolveSudoku(grid);
-                            if(aageSolutionPossible){
+                            bool nextSolution = SolveSudoku(grid);
+                            if(nextSolution){
                                 return true;
                             }
                             else{
